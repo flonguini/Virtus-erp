@@ -3,10 +3,102 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:Virtus"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="" Height="780" Width="1280" WindowStartupLocation="CenterScreen">
+
     <Grid>
-        
+
+        <!--#region Rows and Columns -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="95"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <!--#endregion-->
+
+        <!--#region Top Menu -->
+        <Border Background="{StaticResource DarkPurpleBrush}" Grid.ColumnSpan="2" Panel.ZIndex="3" >
+            <Border.Effect>
+                <DropShadowEffect Opacity="0.3" Direction="270" ShadowDepth="3" />
+            </Border.Effect>
+
+            <TextBlock VerticalAlignment="Center" 
+                       FontSize="{StaticResource FontSizeXXLarge}" 
+                       FontFamily="{StaticResource MontserratRegular}" 
+                       Margin="20,0,0,0">
+                <Run Text="V" Foreground="{StaticResource WhiteBrush}"/><Run Text="/" Foreground="{StaticResource LightBlueBrush}"/><Run Text="IRTUS" Foreground="{StaticResource WhiteBrush}"/>
+            </TextBlock>
+        </Border>
+        <!--#endregion-->
+
+        <Border Grid.Row="1" Grid.ColumnSpan="2" Background="{StaticResource DarkPurpleBrush}" />
+
+
+        <!--#region Side Menu-->
+        <Border Grid.Row="1" Background="{StaticResource DarkPurpleBrush}">
+            <Border.Effect>
+                <DropShadowEffect Opacity="0.3" Direction="0" ShadowDepth="3" />
+            </Border.Effect>
+            <StackPanel>
+                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeAddressCard}">
+                    <Button.Resources>
+                        <sys:String x:Key="Tag">Cadastros</sys:String>
+                    </Button.Resources>
+                </Button>
+
+                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCube}">
+                    <Button.Resources>
+                        <sys:String x:Key="Tag">Produtos</sys:String>
+                    </Button.Resources>
+                </Button>
+                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeGear}">
+                    <Button.Resources>
+                        <sys:String x:Key="Tag">Serviços</sys:String>
+                    </Button.Resources>
+                </Button>
+                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeBarcode}">
+                    <Button.Resources>
+                        <sys:String x:Key="Tag">Orçamentos</sys:String>
+                    </Button.Resources>
+                </Button>
+                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeFolder}">
+                    <Button.Resources>
+                        <sys:String x:Key="Tag">O. S.</sys:String>
+                    </Button.Resources>
+                </Button>
+                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeChartLine}">
+                    <Button.Resources>
+                        <sys:String x:Key="Tag">Vendas</sys:String>
+                    </Button.Resources>
+                </Button>
+                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCubes}">
+                    <Button.Resources>
+                        <sys:String x:Key="Tag">Estoque</sys:String>
+                    </Button.Resources>
+                </Button>
+                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeDollar}">
+                    <Button.Resources>
+                        <sys:String x:Key="Tag">Finaceiro</sys:String>
+                    </Button.Resources>
+                </Button>
+                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeFile}" Height="65">
+                    <Button.Resources>
+                        <sys:String x:Key="Tag">Relatórios</sys:String>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Border>
+        <!--#endregion-->
+
+        <!--#region Content-->
+        <ContentControl Grid.Row="1" Grid.Column="1"/>
+        <!--#endregion-->
+
     </Grid>
 </Window>
