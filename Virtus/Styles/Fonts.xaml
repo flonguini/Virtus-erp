@@ -34,6 +34,7 @@
     <system:Double x:Key="FontSizeXXLarge">38</system:Double>
     <!--#endregion-->
 
+    <!--#region Font Awesome icons -->
     <system:String x:Key="FontAwesomeAddressCard">&#xf2bb;</system:String>
     <system:String x:Key="FontAwesomeCube">&#xf1b2;</system:String>
     <system:String x:Key="FontAwesomeGear">&#xf013;</system:String>
@@ -44,5 +45,6 @@
     <system:String x:Key="FontAwesomeChartbar">&#xf1fe;</system:String>
     <system:String x:Key="FontAwesomeChartLine">&#xf201;</system:String>
     <system:String x:Key="FontAwesomeFolder">&#xf07c;</system:String>
+    <!--#endregion-->
 
 </ResourceDictionary>
