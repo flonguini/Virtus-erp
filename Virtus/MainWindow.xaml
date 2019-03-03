@@ -42,62 +42,62 @@
 
         <!--#region Side Menu-->
         <Border Grid.Row="1" Background="{StaticResource DarkPurpleBrush}">
-            <Border.Effect>
-                <DropShadowEffect Opacity="0.3" Direction="0" ShadowDepth="3" />
-            </Border.Effect>
-            <StackPanel>
-                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeAddressCard}">
-                    <Button.Resources>
-                        <sys:String x:Key="Tag">Cadastros</sys:String>
-                    </Button.Resources>
-                </Button>
+                <Border.Effect>
+                    <DropShadowEffect Opacity="0.3" Direction="0" ShadowDepth="3" />
+                </Border.Effect>
+                <StackPanel>
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeAddressCard}">
+                        <Button.Resources>
+                            <sys:String x:Key="Tag">Cadastros</sys:String>
+                        </Button.Resources>
+                    </Button>
 
-                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCube}">
-                    <Button.Resources>
-                        <sys:String x:Key="Tag">Produtos</sys:String>
-                    </Button.Resources>
-                </Button>
-                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeGear}">
-                    <Button.Resources>
-                        <sys:String x:Key="Tag">Serviços</sys:String>
-                    </Button.Resources>
-                </Button>
-                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeBarcode}">
-                    <Button.Resources>
-                        <sys:String x:Key="Tag">Orçamentos</sys:String>
-                    </Button.Resources>
-                </Button>
-                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeFolder}">
-                    <Button.Resources>
-                        <sys:String x:Key="Tag">O. S.</sys:String>
-                    </Button.Resources>
-                </Button>
-                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeChartLine}">
-                    <Button.Resources>
-                        <sys:String x:Key="Tag">Vendas</sys:String>
-                    </Button.Resources>
-                </Button>
-                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCubes}">
-                    <Button.Resources>
-                        <sys:String x:Key="Tag">Estoque</sys:String>
-                    </Button.Resources>
-                </Button>
-                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeDollar}">
-                    <Button.Resources>
-                        <sys:String x:Key="Tag">Finaceiro</sys:String>
-                    </Button.Resources>
-                </Button>
-                <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeFile}" Height="65">
-                    <Button.Resources>
-                        <sys:String x:Key="Tag">Relatórios</sys:String>
-                    </Button.Resources>
-                </Button>
-            </StackPanel>
-        </Border>
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCube}">
+                        <Button.Resources>
+                            <sys:String x:Key="Tag">Produtos</sys:String>
+                        </Button.Resources>
+                    </Button>
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeGear}">
+                        <Button.Resources>
+                            <sys:String x:Key="Tag">Serviços</sys:String>
+                        </Button.Resources>
+                    </Button>
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeBarcode}">
+                        <Button.Resources>
+                            <sys:String x:Key="Tag">Orçamentos</sys:String>
+                        </Button.Resources>
+                    </Button>
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeFolder}">
+                        <Button.Resources>
+                            <sys:String x:Key="Tag">O. S.</sys:String>
+                        </Button.Resources>
+                    </Button>
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeChartLine}">
+                        <Button.Resources>
+                            <sys:String x:Key="Tag">Vendas</sys:String>
+                        </Button.Resources>
+                    </Button>
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCubes}">
+                        <Button.Resources>
+                            <sys:String x:Key="Tag">Estoque</sys:String>
+                        </Button.Resources>
+                    </Button>
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeDollar}">
+                        <Button.Resources>
+                            <sys:String x:Key="Tag">Finaceiro</sys:String>
+                        </Button.Resources>
+                    </Button>
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeFile}" Height="65">
+                        <Button.Resources>
+                            <sys:String x:Key="Tag">Relatórios</sys:String>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </Border>
         <!--#endregion-->
 
         <!--#region Content-->
-        <ContentControl Grid.Row="1" Grid.Column="1" Margin="0,0,0,10" Content="{Binding MainContent, Converter={local:ApplicationPageValueConverter}}" />
+        <ContentControl Grid.Row="1" Grid.Column="1" Content="{Binding MainContent, Converter={local:ApplicationPageValueConverter}}" />
         <!--#endregion-->
 
     </Grid>

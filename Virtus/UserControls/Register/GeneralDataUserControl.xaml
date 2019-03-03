@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="Virtus.GeneralDataUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:Virtus"
+             mc:Ignorable="d"
+             d:DesignHeight="150" d:DesignWidth="1280">
+
+    <Grid HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="270" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Tipo, E-mail, Site -->
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Tipo" Style="{StaticResource TextBlockStyle}"/>
+            <TextBlock Grid.Row="1" Text="E-mail" Style="{StaticResource TextBlockStyle}" />
+            <TextBlock Grid.Row="2" Text="Site" Style="{StaticResource TextBlockStyle}" />
+
+            <ComboBox Grid.Column="1" Height="25" 
+                      ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:TypeOfPerson}}}" />
+            <TextBox Text="{Binding Client.Email, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="1" />
+            <TextBox Text="{Binding Client.Site}" Grid.Column="1" Grid.Row="2" />
+        </Grid>
+
+        <!--Situação, CPF, Telefone-->
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Stuação" Style="{StaticResource TextBlockStyle}" />
+            <TextBlock Grid.Row="1" Text="CPF" Style="{StaticResource TextBlockStyle}" />
+            <TextBlock Grid.Row="2" Text="Telefone" Style="{StaticResource TextBlockStyle}" />
+
+            <ComboBox Grid.Column="1" Height="25"
+                      ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:Situation}}}"/>
+            <TextBox Text="{Binding Client.CpfOrCnpj}" Grid.Column="1" Grid.Row="1" />
+            <TextBox Text="{Binding Client.PhoneNumber}" Grid.Column="1" Grid.Row="2" />
+        </Grid>
+
+        <!-- Nome, Data de nascimento, Celular -->
+        <Grid Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Nome" Style="{StaticResource TextBlockStyle}" />
+            <TextBlock Grid.Row="1" Text="Data de Nascimento" Style="{StaticResource TextBlockStyle}" />
+            <TextBlock Grid.Row="2" Text="Celular" Style="{StaticResource TextBlockStyle}" />
+
+            <TextBox Text="{Binding Client.Name}" Grid.Column="1" Width="200"/>
+            <TextBox Text="{Binding Client.DateOfBirth}" Grid.Column="1" Grid.Row="1" />
+            <TextBox Text="{Binding Client.CellPhone}" Grid.Column="1" Grid.Row="2" />
+        </Grid>
+    </Grid>
+</UserControl>

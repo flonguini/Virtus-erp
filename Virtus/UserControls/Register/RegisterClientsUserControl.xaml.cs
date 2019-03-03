@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Virtus.UserControls
+namespace Virtus
 {
     /// <summary>
-    /// Interaction logic for RegisterUserControl.xaml
+    /// Interaction logic for RegisterClientsUserControl.xaml
     /// </summary>
-    public partial class RegisterUserControl : UserControl
+    public partial class RegisterClientsUserControl : UserControl
     {
-        public RegisterUserControl()
+        public RegisterClientsUserControl()
         {
             InitializeComponent();
         }

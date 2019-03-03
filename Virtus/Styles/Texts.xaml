@@ -52,4 +52,15 @@
     </Style>
     
     <!--#endregion-->
+    
+    <!--#region Default textblock-->
+    <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="Foreground" Value="{StaticResource GreyBrush}" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="Margin" Value="15" />
+    </Style>
+    <!--#endregion-->
 </ResourceDictionary>
