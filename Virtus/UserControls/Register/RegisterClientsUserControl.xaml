@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel>
-            <!--<Image Source="/Virtus;component/Resources/DefaultUser2.png" Width="145" />-->
+            <Image Source="/Virtus;component/Resources/DefaultUser2.png" Width="145" />
             <Button Style="{StaticResource DefaultButton}" 
                     Content="PROCURAR" 
                     Width="120"
