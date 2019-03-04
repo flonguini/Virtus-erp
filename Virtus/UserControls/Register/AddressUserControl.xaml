@@ -46,7 +46,16 @@
             <TextBlock Grid.Row="1" Text="Estado" Style="{StaticResource TextBlockStyle}" />
 
             <TextBox Text="{Binding Client.Street}" Grid.Column="1" />
-            <ComboBox Height="25" Grid.Row="1" Grid.Column="1" Width="150" HorizontalAlignment="Left" />
+            <ComboBox Grid.Row="1"
+                      Grid.Column="1" 
+                      Width="150" 
+                      HorizontalAlignment="Left" 
+                      Style="{StaticResource DefaultComboBox}">
+                <ComboBoxItem>teste1</ComboBoxItem>
+                <ComboBoxItem>teste2</ComboBoxItem>
+                <ComboBoxItem>teste3</ComboBoxItem>
+                <ComboBoxItem>teste4</ComboBoxItem>
+            </ComboBox>
         </Grid>
 
         <Grid Grid.Column="2">

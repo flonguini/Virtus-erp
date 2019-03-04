@@ -15,16 +15,39 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Background="{StaticResource DarkBlueBrush}">
-            <TextBlock FontSize="{StaticResource FontSizeRegular}" Foreground="{StaticResource WhiteBrush}" FontFamily="{StaticResource MontserratRegular}" Margin="15 0 0 0"  VerticalAlignment="Center" Text="Clientes" />
-            <TextBlock FontSize="{StaticResource FontSizeRegular}" Foreground="{StaticResource WhiteBrush}" FontFamily="{StaticResource MontserratRegular}" Margin="30,0" VerticalAlignment="Center" Text="Fornecedores" />
-            <TextBlock FontSize="{StaticResource FontSizeRegular}" Foreground="{StaticResource WhiteBrush}" FontFamily="{StaticResource MontserratRegular}" VerticalAlignment="Center" Text="Funcionarios" />
-            <TextBlock FontSize="{StaticResource FontSizeRegular}" Foreground="{StaticResource WhiteBrush}" FontFamily="{StaticResource MontserratRegular}" Margin="30,0" VerticalAlignment="Center" Text="Transportadoras" />
-
+            <TextBlock FontSize="{StaticResource FontSizeRegular}" 
+                       Foreground="{StaticResource WhiteBrush}" 
+                       FontFamily="{StaticResource MontserratRegular}" 
+                       Margin="15 0 0 0"  
+                       VerticalAlignment="Center" 
+                       Text="Clientes" />
+            <TextBlock FontSize="{StaticResource FontSizeRegular}" 
+                       Foreground="{StaticResource WhiteBrush}" 
+                       FontFamily="{StaticResource MontserratRegular}" 
+                       Margin="30,0" 
+                       VerticalAlignment="Center" 
+                       Text="Fornecedores" />
+            <TextBlock FontSize="{StaticResource FontSizeRegular}" 
+                       Foreground="{StaticResource WhiteBrush}" 
+                       FontFamily="{StaticResource MontserratRegular}" 
+                       VerticalAlignment="Center" 
+                       Text="Funcionarios" />
+            <TextBlock FontSize="{StaticResource FontSizeRegular}" 
+                       Foreground="{StaticResource WhiteBrush}" 
+                       FontFamily="{StaticResource MontserratRegular}" 
+                       Margin="30,0" 
+                       VerticalAlignment="Center" 
+                       Text="Transportadoras" />
         </StackPanel>
         
         <local:RegisterClientsUserControl Grid.Row="1" Margin="20,20,0,0"/>
 
-        <Button Content="SALVAR" HorizontalAlignment="Right" Width="150" Grid.Row="2" Style="{StaticResource DefaultButton}" />
+        <Button Content="SALVAR" 
+                HorizontalAlignment="Right" 
+                Width="150" 
+                Grid.Row="2" 
+                Style="{StaticResource DefaultButton}" 
+                Margin="0,0,20,0"/>
 
         <StackPanel Grid.Row="3" Margin="0,15,0,0">
             <TextBlock Text="Clientes" Foreground="{StaticResource WhiteBrush}" FontSize="{StaticResource FontSizeLarge}" Margin="0,0,0,5" />

@@ -72,7 +72,7 @@ namespace Virtus
         /// <summary>
         /// Number from client address
         /// </summary>
-        public int Number { get; set; }
+        public int? Number { get; set; }
 
         /// <summary>
         /// Other informations from client address

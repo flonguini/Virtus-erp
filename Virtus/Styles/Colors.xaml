@@ -23,4 +23,7 @@
     <Color x:Key="Grey">#707070</Color>
     <SolidColorBrush x:Key="GreyBrush" Color="{StaticResource Grey}" />
 
+    <Color x:Key="LightGrey">#C3C3C3</Color>
+    <SolidColorBrush x:Key="LightGreyBrush" Color="{StaticResource LightGrey}" />
+
 </ResourceDictionary>

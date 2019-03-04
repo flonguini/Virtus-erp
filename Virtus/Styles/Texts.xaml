@@ -15,6 +15,7 @@
         <Setter Property="Foreground" Value="{StaticResource WhiteBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource LightBlueBrush}" />
         <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
         <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}" />
         <Setter Property="Padding" Value="15,3,0,0" />
         <Setter Property="Height" Value="30" />
