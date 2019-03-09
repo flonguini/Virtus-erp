@@ -5,7 +5,7 @@ namespace Virtus
     /// <summary>
     /// The client register model
     /// </summary>
-    public class ClientModel
+    public class Client
     {
         #region Public Properties
 
@@ -60,39 +60,21 @@ namespace Virtus
         public string CellPhone { get; set; }
 
         /// <summary>
-        /// The client zip code
+        /// The client Address
         /// </summary>
-        public string ZipCode { get; set; }
+        public Address Address { get; set; }
+
+        #endregion
+
+        #region Constructors
 
         /// <summary>
-        /// The street from client
+        /// Default constructor
         /// </summary>
-        public string Street { get; set; }
-
-        /// <summary>
-        /// Number from client address
-        /// </summary>
-        public int? Number { get; set; }
-
-        /// <summary>
-        /// Other informations from client address
-        /// </summary>
-        public string Complement { get; set; }
-
-        /// <summary>
-        /// The naughborhood from client
-        /// </summary>
-        public string Neighborhood { get; set; }
-
-        /// <summary>
-        /// State from client
-        /// </summary>
-        public string State { get; set; }
-
-        /// <summary>
-        /// City from client
-        /// </summary>
-        public string City { get; set; }
+        public Client()
+        {
+            Address = new Address();
+        }
 
         #endregion
     }

@@ -7,11 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="1100">
 
-    <Grid HorizontalAlignment="Center">
+    <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" />
-            <ColumnDefinition Width="350" />
-            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
@@ -28,8 +28,8 @@
             <TextBlock Text="CEP" Style="{StaticResource TextBlockStyle}" />
             <TextBlock Grid.Row="1" Text="Bairro" Style="{StaticResource TextBlockStyle}" />
 
-            <TextBox Text="{Binding Client.ZipCode}" Grid.Column="1" />
-            <TextBox Text="{Binding Client.Neighborhood}" Grid.Row="1" Grid.Column="1" />
+            <TextBox Text="{Binding Client.Address.ZipCode}" Grid.Column="1" />
+            <TextBox Text="{Binding Client.Address.Neighborhood}" Grid.Row="1" Grid.Column="1" />
         </Grid>
 
         <Grid Grid.Column="1">
@@ -45,10 +45,10 @@
             <TextBlock Text="Logradouro" Style="{StaticResource TextBlockStyle}" />
             <TextBlock Grid.Row="1" Text="Estado" Style="{StaticResource TextBlockStyle}" />
 
-            <TextBox Text="{Binding Client.Street}" Grid.Column="1" />
+            <TextBox Text="{Binding Client.Address.Street}" Grid.Column="1" />
             <ComboBox Grid.Row="1"
                       Grid.Column="1" 
-                      Width="150" 
+                      MinWidth="150" 
                       HorizontalAlignment="Left" 
                       Style="{StaticResource DefaultComboBox}">
                 <ComboBoxItem>teste1</ComboBoxItem>
@@ -71,8 +71,8 @@
             <TextBlock Text="Número" Style="{StaticResource TextBlockStyle}" />
             <TextBlock Grid.Row="1" Text="Cidade" Style="{StaticResource TextBlockStyle}" />
 
-            <TextBox Text="{Binding Client.Number}" Grid.Column="1" />
-            <TextBox Text="{Binding Client.City}" Grid.Row="1" Grid.Column="1" />
+            <TextBox Text="{Binding Client.Address.Number}" Grid.Column="1" />
+            <TextBox Text="{Binding Client.Address.City}" Grid.Row="1" Grid.Column="1" />
         </Grid>
 
         <Grid Grid.Column="3">
@@ -85,7 +85,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Text="Complemento" Style="{StaticResource TextBlockStyle}" />
-            <TextBox Text="{Binding Client.Complement}" Grid.Column="1" Width="175" />
+            <TextBox Text="{Binding Client.Address.Complement}" Grid.Column="1" />
         </Grid>
     </Grid>
 </UserControl>

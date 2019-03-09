@@ -5,8 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Virtus"
              mc:Ignorable="d"
-             d:DesignHeight="355" d:DesignWidth="1000">
-
+             d:DesignHeight="600" d:DesignWidth="1280">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -16,33 +15,71 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <StackPanel>
+            <!-- Client Image-->
             <Image Source="/Virtus;component/Resources/DefaultUser2.png" Width="145" />
+            <!-- Search client image button -->
             <Button Style="{StaticResource DefaultButton}" 
                     Content="PROCURAR" 
                     Width="120"
-                    Margin="0,10,0,0"/>
+                    Margin="0,10,0,0"
+                    Command="{Binding SearchPicture}"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Margin="20,0,0,0">
+            <!-- Header general data-->
             <TextBlock Text="Dados Gerais" 
                        Foreground="{StaticResource DarkRedBrush}"
                        FontSize="{StaticResource FontSizeLarge}"
                        FontFamily="{StaticResource MontserratBold}"/>
             <Separator />
+            <!-- General user control -->
             <local:GeneralDataUserControl Margin="15,10,15,0"  />
         </StackPanel>
 
         <StackPanel Grid.Row="1"  Grid.ColumnSpan="3" Margin="20,20,0,0">
+            <!-- Header Address-->
             <TextBlock Text="Endereço" 
                        Foreground="{StaticResource DarkRedBrush}"
                        FontSize="{StaticResource FontSizeLarge}"
                        FontFamily="{StaticResource MontserratBold}"/>
             <Separator />
+            <!-- Address user control-->
             <local:AddressUserControl Margin="0,0,15,0" />
+        </StackPanel>
+
+        <!--Btn salvar-->
+        <Button Content="SALVAR"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Right" 
+                Width="150" 
+                Grid.Row="2" 
+                Style="{StaticResource DefaultButton}" 
+                Margin="0,0,20,0"
+                Command="{Binding SaveClient}"/>
+
+        <!-- grid -->
+        <StackPanel Grid.Row="3" Margin="0,15,0,0" Grid.ColumnSpan="2" >
+            <TextBlock Text="Clientes" 
+                       Foreground="{StaticResource WhiteBrush}" 
+                       FontSize="{StaticResource FontSizeLarge}" />
+
+            <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding Clients}">
+                <DataGrid.Columns >
+                    <DataGridTextColumn Binding="{Binding Name}" Header="Nome"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Type}" Header="Tipo"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Situation}" Header="Situação"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding PhoneNumber}" Header="Telefone"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding CellPhone}" Header="Celular"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Email}" Header="E-mail"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding DateOfRegister}" Header="Data de cadastro"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
 
     </Grid>

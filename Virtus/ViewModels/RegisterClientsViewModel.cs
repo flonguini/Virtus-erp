@@ -1,9 +1,7 @@
-﻿using PropertyChanged;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Windows;
+using System.Windows.Input;
 
 namespace Virtus
 {
@@ -12,9 +10,28 @@ namespace Virtus
         #region Properties
 
         /// <summary>
-        /// The <see cref="ClientModel"/> that it is been register
+        /// The <see cref="Virtus.Client"/> that it is been register
         /// </summary>
-        public ClientModel Client { get; set; }
+        public Client Client { get; set; }
+
+        /// <summary>
+        /// List of <see cref="Virtus.Client"/> that populates the datagrid
+        /// </summary>
+        public ObservableCollection<Client> Clients { get; set; }
+
+        #endregion
+
+        #region Commands
+
+        /// <summary>
+        /// Command to search the profile picture
+        /// </summary>
+        public ICommand SearchPicture { get; set; }
+
+        /// <summary>
+        /// Command to save the client
+        /// </summary>
+        public ICommand SaveClient { get; set; }
 
         #endregion
 
@@ -26,7 +43,62 @@ namespace Virtus
         public RegisterClientsViewModel()
         {
             // Initialize the client property
-            Client = new ClientModel();
+            Client = new Client();
+
+            SearchPicture = new RelayCommand(SearchProfilePicure);
+
+            SaveClient = new RelayCommand(SaveNewClient);
+
+            Clients = new ObservableCollection<Client>
+            {
+                new Client
+                {
+                    Name = "Fernando",
+                    Type = TypeOfPerson.Fisica,
+                    Situation = Situation.Ativo,
+                    PhoneNumber = "3565-5495",
+                    CellPhone = "11 9 6199-2735",
+                    Email = "flonguini@outlook.com",
+                    DateOfRegister = DateTime.Now
+                },
+
+                new Client
+                {
+                    Name = "Rafaela",
+                    Type = TypeOfPerson.Juridica,
+                    Situation = Situation.Ativo,
+                    PhoneNumber = "3565-5495",
+                    CellPhone = "11 9 6199-2735",
+                    Email = "rafaela@outlook.com",
+                    DateOfRegister = DateTime.Now
+                },
+
+                new Client
+                {
+                    Name = "Roberta",
+                    Type = TypeOfPerson.Fisica,
+                    Situation = Situation.Ativo,
+                    PhoneNumber = "3565-5495",
+                    CellPhone = "11 9 6199-2735",
+                    Email = "Roberta@outlook.com",
+                    DateOfRegister = DateTime.Now
+                }
+            };
+        }
+
+        #endregion
+
+        #region Methods
+
+        public void SearchProfilePicure()
+        {
+            MessageBox.Show("oi");
+        }
+
+        public void SaveNewClient()
+        {
+            MessageBox.Show("Olá");
+            Clients.Add(Client);
         }
 
         #endregion

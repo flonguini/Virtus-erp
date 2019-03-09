@@ -287,7 +287,7 @@
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
         <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}" />
         <Setter Property="BorderBrush" Value="{StaticResource LightBlueBrush}" />
-        <Setter Property="BorderThickness" Value="2,0,2,2" />
+        <Setter Property="BorderThickness" Value="2,1,2,1" />
         <Setter Property="Padding" Value="5" />
         <Setter Property="Template" Value="{StaticResource ComboBoxItemControlTemplate}" />
     </Style>
