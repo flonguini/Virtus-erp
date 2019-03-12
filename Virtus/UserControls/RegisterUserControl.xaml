@@ -9,12 +9,10 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <!-- Menu-->
+        
         <StackPanel Orientation="Horizontal" Background="{StaticResource DarkBlueBrush}">
             <TextBlock FontSize="{StaticResource FontSizeRegular}" 
                        Foreground="{StaticResource WhiteBrush}" 
@@ -42,10 +40,13 @@
         </StackPanel>
         
         <!-- Register client-->
-        <local:RegisterClientsUserControl Grid.Row="1" Margin="20,20,0,0"/>
 
-        
-
-        
+        <!--#region Content-->
+        <ContentControl Grid.Row="1" 
+                        Grid.Column="1" 
+                        Margin="15,15,0,0"
+                        Content="{Binding RegisterContent, Converter={local:RegisterPageValueConverter}}" />
+        <!--#endregion-->
+       
     </Grid>
 </UserControl>

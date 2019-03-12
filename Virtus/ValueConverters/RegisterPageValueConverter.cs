@@ -5,17 +5,19 @@ using System.Globalization;
 namespace Virtus
 {
     /// <summary>
-    /// Converts the <see cref="ApplicationPage"/> to an actual view
+    /// Converts the <see cref="RegisterPage"/> to an actual view
     /// </summary>
-    public class ApplicationPageValueConverter : BaseValueConverter<ApplicationPageValueConverter>
+    public class RegisterPageValueConverter : BaseValueConverter<RegisterPageValueConverter>
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             // Find the appropriate view
-            switch ((ApplicationPage)value)
+            switch ((RegisterPage)value)
             {
-                case ApplicationPage.Register:
-                    return new RegisterUserControl();
+                case RegisterPage.Client:
+                    return new RegisterClientsUserControl();
+                case RegisterPage.Supplier:
+                    return new RegisterSupplierUserControl();
                 default:
                     Debugger.Break();
                     return null;

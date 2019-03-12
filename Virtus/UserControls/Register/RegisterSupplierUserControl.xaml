@@ -1,12 +1,11 @@
-﻿<UserControl x:Class="Virtus.RegisterClientsUserControl"
+﻿<UserControl x:Class="Virtus.RegisterSupplierUserControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Virtus"
-             mc:Ignorable="d"
-             d:DesignHeight="600" d:DesignWidth="1280">
-
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="1200">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -64,7 +63,7 @@
                     Margin="0,0,20,0"
                     Command="{Binding SaveClient}"/>
 
-            <TextBlock Text="Clientes" 
+            <TextBlock Text="Fornecedores" 
                        Foreground="{StaticResource WhiteBrush}" 
                        FontSize="{StaticResource FontSizeLarge}" />
 
@@ -78,13 +77,13 @@
                   ScrollViewer.CanContentScroll="True"
                   ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,0,20,0">
             <DataGrid.Columns >
-                <DataGridTextColumn Width="250" Binding="{Binding Name}" Header="Nome"></DataGridTextColumn>
-                <DataGridTextColumn Width="150" Binding="{Binding Type}" Header="Tipo"></DataGridTextColumn>
-                <DataGridTextColumn Width="150" Binding="{Binding Situation}" Header="Situação"></DataGridTextColumn>
-                <DataGridTextColumn Width="120" Binding="{Binding PhoneNumber}" Header="Telefone"></DataGridTextColumn>
-                <DataGridTextColumn Width="120" Binding="{Binding CellPhone}" Header="Celular"></DataGridTextColumn>
-                <DataGridTextColumn Width="250" Binding="{Binding Email}" Header="E-mail"></DataGridTextColumn>
-                <DataGridTextColumn Width="150" Binding="{Binding DateOfRegister}" Header="Data de cadastro"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Nome"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Type}" Header="Tipo"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Situation}" Header="Situação"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding PhoneNumber}" Header="Telefone"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding CellPhone}" Header="Celular"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Email}" Header="E-mail"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding DateOfRegister}" Header="Data de cadastro"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
 

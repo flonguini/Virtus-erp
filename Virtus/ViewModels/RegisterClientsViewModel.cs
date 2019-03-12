@@ -19,6 +19,11 @@ namespace Virtus
         /// </summary>
         public ObservableCollection<Client> Clients { get; set; }
 
+        /// <summary>
+        /// The current register page
+        /// </summary>
+        public RegisterPage RegisterContent { get; set; } = RegisterPage.Client;
+
         #endregion
 
         #region Commands
@@ -97,7 +102,6 @@ namespace Virtus
 
         public void SaveNewClient()
         {
-            MessageBox.Show("Olá");
             Clients.Add(Client);
         }
 

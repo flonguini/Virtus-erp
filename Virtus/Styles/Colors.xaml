@@ -5,6 +5,9 @@
     <Color x:Key="DarkPurple">#2F3242</Color>
     <SolidColorBrush x:Key="DarkPurpleBrush" Color="{StaticResource DarkPurple}" />
 
+    <Color x:Key="MiddlePurple">#3A3E52</Color>
+    <SolidColorBrush x:Key="MiddlePurpleBrush" Color="{StaticResource MiddlePurple}" />
+
     <Color x:Key="LightPurple">#737AA1</Color>
     <SolidColorBrush x:Key="LightPurpleBrush" Color="{StaticResource LightPurple}" />
 
