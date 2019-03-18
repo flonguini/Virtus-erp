@@ -6,7 +6,7 @@ namespace Virtus
     /// <summary>
     /// Base viewmodel that implements <see cref="INotifyPropertyChanged"/> interface
     /// </summary>
-    //[AddINotifyPropertyChangedInterface]
+    [AddINotifyPropertyChangedInterface]
     public class BaseViewModel : INotifyPropertyChanged
     {
         /// <summary>

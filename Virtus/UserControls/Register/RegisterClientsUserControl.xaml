@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Virtus"
              mc:Ignorable="d"
              d:DesignHeight="600" d:DesignWidth="1280">
-
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />

@@ -18,6 +18,10 @@ namespace Virtus
                     return new RegisterClientsUserControl();
                 case RegisterPage.Supplier:
                     return new RegisterSupplierUserControl();
+                case RegisterPage.Employee:
+                    return new RegisterEmployeeUserControl();
+                case RegisterPage.Carrier:
+                    return new RegisterCarrierUserControl();
                 default:
                     Debugger.Break();
                     return null;

@@ -14,29 +14,10 @@
 
         
         <StackPanel Orientation="Horizontal" Background="{StaticResource DarkBlueBrush}">
-            <TextBlock FontSize="{StaticResource FontSizeRegular}" 
-                       Foreground="{StaticResource WhiteBrush}" 
-                       FontFamily="{StaticResource MontserratRegular}" 
-                       Margin="15 0 0 0"  
-                       VerticalAlignment="Center" 
-                       Text="Clientes" />
-            <TextBlock FontSize="{StaticResource FontSizeRegular}" 
-                       Foreground="{StaticResource WhiteBrush}" 
-                       FontFamily="{StaticResource MontserratRegular}" 
-                       Margin="30,0" 
-                       VerticalAlignment="Center" 
-                       Text="Fornecedores" />
-            <TextBlock FontSize="{StaticResource FontSizeRegular}" 
-                       Foreground="{StaticResource WhiteBrush}" 
-                       FontFamily="{StaticResource MontserratRegular}" 
-                       VerticalAlignment="Center" 
-                       Text="Funcionarios" />
-            <TextBlock FontSize="{StaticResource FontSizeRegular}" 
-                       Foreground="{StaticResource WhiteBrush}" 
-                       FontFamily="{StaticResource MontserratRegular}" 
-                       Margin="30,0" 
-                       VerticalAlignment="Center" 
-                       Text="Transportadoras" />
+            <Button Content="Clientes" Style="{StaticResource MenuButton}" Command="{Binding MenuButton}" CommandParameter="Clientes"/>
+            <Button Content="Fornecedores" Style="{StaticResource MenuButton}" Command="{Binding MenuButton}" CommandParameter="Fornecedores" />
+            <Button Content="Funcionários" Style="{StaticResource MenuButton}" Command="{Binding MenuButton}" CommandParameter="Funcionarios"/>
+            <Button Content="Transportadoras" Style="{StaticResource MenuButton}" Command="{Binding MenuButton}" CommandParameter="Transportadoras"/>
         </StackPanel>
         
         <!-- Register client-->

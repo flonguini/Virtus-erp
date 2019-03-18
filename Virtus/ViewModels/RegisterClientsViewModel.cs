@@ -22,7 +22,7 @@ namespace Virtus
         /// <summary>
         /// The current register page
         /// </summary>
-        public RegisterPage RegisterContent { get; set; } = RegisterPage.Client;
+        public RegisterPage RegisterContent { get; set; } = RegisterPage.Employee;
 
         #endregion
 
@@ -37,6 +37,11 @@ namespace Virtus
         /// Command to save the client
         /// </summary>
         public ICommand SaveClient { get; set; }
+
+        /// <summary>
+        /// Command for the menu
+        /// </summary>
+        public ICommand MenuButton { get; set; }
 
         #endregion
 
@@ -53,6 +58,8 @@ namespace Virtus
             SearchPicture = new RelayCommand(SearchProfilePicure);
 
             SaveClient = new RelayCommand(SaveNewClient);
+
+            MenuButton = new RelayParameterizedCommand(ChangeMenuPage);
 
             Clients = new ObservableCollection<Client>
             {
@@ -95,6 +102,27 @@ namespace Virtus
 
         #region Methods
 
+        public void ChangeMenuPage(object name)
+        {
+            switch (name)
+            {
+                case "Clientes":
+                    RegisterContent = RegisterPage.Client;
+                    break;
+                case "Fornecedores":
+                    RegisterContent = RegisterPage.Supplier;
+                    break;
+                case "Funcionarios":
+                    RegisterContent = RegisterPage.Employee;
+                    break;
+                case "Transportadoras":
+                    RegisterContent = RegisterPage.Carrier;
+                    break;
+                default:
+                    break;
+            }
+        }
+
         public void SearchProfilePicure()
         {
             MessageBox.Show("oi");
@@ -102,7 +130,31 @@ namespace Virtus
 
         public void SaveNewClient()
         {
-            Clients.Add(Client);
+            var c = new Client
+            {
+                Email = Client.Email,
+                Type = Client.Type,
+                Situation = Client.Situation,
+                Name = Client.Name,
+                CpfOrCnpj = Client.CpfOrCnpj,
+                DateOfBirth = Client.DateOfBirth,
+                DateOfRegister = DateTime.Now,
+                Site = Client.Site,
+                PhoneNumber = Client.PhoneNumber,
+                CellPhone = Client.PhoneNumber,
+                Address = new Address
+                {
+                    ZipCode = Client.Address.ZipCode,
+                    Street = Client.Address.Street,
+                    Number = Client.Address.Number,
+                    Complement = Client.Address.Complement,
+                    Neighborhood = Client.Address.Neighborhood,
+                    State = Client.Address.State,
+                    City = Client.Address.City
+                }
+            };
+
+            Clients.Add(c);
         }
 
         #endregion
