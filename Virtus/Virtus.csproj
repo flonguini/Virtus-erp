@@ -105,7 +105,8 @@
     <Compile Include="ValueConverters\EnumDescriptionTypeConverter.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="ViewModels\RegisterClientsViewModel.cs" />
+    <Compile Include="ViewModels\Register\RegisterClientsViewModel.cs" />
+    <Compile Include="ViewModels\Register\RegisterViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="ViewModels\RelayParameterizedCommand.cs" />
     <Page Include="MainWindow.xaml">

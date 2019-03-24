@@ -7,11 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="650" d:DesignWidth="1200">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -19,18 +14,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel>
-            <!-- Client Image-->
-            <Image Source="/Virtus;component/Resources/DefaultUser2.png" Width="145" />
-            <!-- Search client image button -->
-            <Button Style="{StaticResource DefaultButton}" 
-                    Content="PROCURAR" 
-                    Width="120"
-                    Margin="0,10,0,0"
-                    Command="{Binding SearchPicture}"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="1" Margin="20,0,0,0">
+        <StackPanel Margin="20,0,0,0">
             <!-- Header general data-->
             <TextBlock Text="Dados Gerais" 
                        Foreground="{StaticResource DarkRedBrush}"
@@ -65,13 +49,13 @@
 
             <TextBlock Text="Fornecedores" 
                        Foreground="{StaticResource WhiteBrush}" 
-                       FontSize="{StaticResource FontSizeLarge}" />
+                       FontSize="{StaticResource FontSizeLarge}" 
+                       Margin="0,0,0,10"/>
 
         </StackPanel>
 
         <!-- grid -->
-        <DataGrid Grid.ColumnSpan="2" 
-                  AutoGenerateColumns="False" 
+        <DataGrid AutoGenerateColumns="False" 
                   ItemsSource="{Binding Clients}" 
                   Grid.Row="4"
                   ScrollViewer.CanContentScroll="True"

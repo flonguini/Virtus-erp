@@ -6,6 +6,11 @@
              xmlns:local="clr-namespace:Virtus"
              mc:Ignorable="d"
              d:DesignHeight="600" d:DesignWidth="1280">
+
+    <UserControl.DataContext>
+        <local:RegisterClientsViewModel/>
+    </UserControl.DataContext>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -56,7 +61,8 @@
 
             <TextBlock Text="Clientes" 
                        Foreground="{StaticResource WhiteBrush}" 
-                       FontSize="{StaticResource FontSizeLarge}" />
+                       FontSize="{StaticResource FontSizeLarge}" 
+                       Margin="0,0,0,10"/>
 
         </StackPanel>
 

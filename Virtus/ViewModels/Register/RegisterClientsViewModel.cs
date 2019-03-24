@@ -22,10 +22,7 @@ namespace Virtus
         /// </summary>
         public ObservableCollection<Client> Clients { get; set; }
 
-        /// <summary>
-        /// The current register page
-        /// </summary>
-        public RegisterPage RegisterContent { get; set; } = RegisterPage.Client;
+        public BitmapImage Image { get; set; } = new BitmapImage(new Uri(@"/Virtus;component/Resources/DefaultUser2.png", UriKind.RelativeOrAbsolute));
 
         #endregion
 
@@ -41,10 +38,7 @@ namespace Virtus
         /// </summary>
         public ICommand SaveClient { get; set; }
 
-        /// <summary>
-        /// Command for the menu
-        /// </summary>
-        public ICommand MenuButton { get; set; }
+        
 
         #endregion
 
@@ -61,8 +55,6 @@ namespace Virtus
             SearchPicture = new RelayCommand(SearchProfilePicure);
 
             SaveClient = new RelayCommand(SaveNewClient);
-
-            MenuButton = new RelayParameterizedCommand(ChangeMenuPage);
 
             Clients = new ObservableCollection<Client>
             {
@@ -104,37 +96,6 @@ namespace Virtus
         #endregion
 
         #region Methods
-
-        /// <summary>
-        /// Change the current register content
-        /// </summary>
-        /// <param name="menuName">The content name</param>
-        public void ChangeMenuPage(object menuName)
-        {
-            switch (menuName)
-            {
-                case "Clientes":
-                    // Open the register client page
-                    RegisterContent = RegisterPage.Client;
-                    break;
-                case "Fornecedores":
-                    // Open the register supplier page
-                    RegisterContent = RegisterPage.Supplier;
-                    break;
-                case "Funcionarios":
-                    // Open the register employee page
-                    RegisterContent = RegisterPage.Employee;
-                    break;
-                case "Transportadoras":
-                    // Open the register carrier page
-                    RegisterContent = RegisterPage.Carrier;
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        public BitmapImage Image { get; set; } = new BitmapImage(new Uri(@"/Virtus;component/Resources/DefaultUser2.png", UriKind.RelativeOrAbsolute));
 
         public void SearchProfilePicure()
         {
