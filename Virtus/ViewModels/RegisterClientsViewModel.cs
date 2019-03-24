@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media.Imaging;
 
 namespace Virtus
 {
@@ -10,19 +13,19 @@ namespace Virtus
         #region Properties
 
         /// <summary>
-        /// The <see cref="Virtus.Client"/> that it is been register
+        /// The <see cref="Client"/> that it is been register
         /// </summary>
         public Client Client { get; set; }
 
         /// <summary>
-        /// List of <see cref="Virtus.Client"/> that populates the datagrid
+        /// List of <see cref="Client"/> that populates the datagrid
         /// </summary>
         public ObservableCollection<Client> Clients { get; set; }
 
         /// <summary>
         /// The current register page
         /// </summary>
-        public RegisterPage RegisterContent { get; set; } = RegisterPage.Employee;
+        public RegisterPage RegisterContent { get; set; } = RegisterPage.Client;
 
         #endregion
 
@@ -102,20 +105,28 @@ namespace Virtus
 
         #region Methods
 
-        public void ChangeMenuPage(object name)
+        /// <summary>
+        /// Change the current register content
+        /// </summary>
+        /// <param name="menuName">The content name</param>
+        public void ChangeMenuPage(object menuName)
         {
-            switch (name)
+            switch (menuName)
             {
                 case "Clientes":
+                    // Open the register client page
                     RegisterContent = RegisterPage.Client;
                     break;
                 case "Fornecedores":
+                    // Open the register supplier page
                     RegisterContent = RegisterPage.Supplier;
                     break;
                 case "Funcionarios":
+                    // Open the register employee page
                     RegisterContent = RegisterPage.Employee;
                     break;
                 case "Transportadoras":
+                    // Open the register carrier page
                     RegisterContent = RegisterPage.Carrier;
                     break;
                 default:
@@ -123,9 +134,18 @@ namespace Virtus
             }
         }
 
+        public BitmapImage Image { get; set; } = new BitmapImage(new Uri(@"/Virtus;component/Resources/DefaultUser2.png", UriKind.RelativeOrAbsolute));
+
         public void SearchProfilePicure()
         {
-            MessageBox.Show("oi");
+            OpenFileDialog dialogBox = new OpenFileDialog();
+            dialogBox.ShowDialog();
+            var filename = dialogBox.FileName;
+            if (!string.IsNullOrEmpty(filename))
+            {
+                Client.Photo = new BitmapImage(new Uri(filename));
+                Image = new BitmapImage(new Uri(filename));
+            }
         }
 
         public void SaveNewClient()

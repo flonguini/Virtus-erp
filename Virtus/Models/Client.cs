@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Media.Imaging;
 
 namespace Virtus
 {
@@ -60,6 +61,11 @@ namespace Virtus
         public string CellPhone { get; set; }
 
         /// <summary>
+        /// Profile picture
+        /// </summary>
+        public BitmapImage Photo { get; set; }
+
+        /// <summary>
         /// The client Address
         /// </summary>
         public Address Address { get; set; }
@@ -74,6 +80,7 @@ namespace Virtus
         public Client()
         {
             Address = new Address();
+            Photo = new BitmapImage(new Uri(@"/Virtus;component/Resources/DefaultUser2.png", UriKind.RelativeOrAbsolute));
         }
 
         #endregion

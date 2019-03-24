@@ -11,7 +11,6 @@ namespace Virtus
         {
             InitializeComponent();
 
-            DataContext = new RegisterClientsViewModel();
         }
     }
 }

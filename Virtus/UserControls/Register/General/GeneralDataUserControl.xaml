@@ -10,13 +10,25 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
 
+        <StackPanel>
+            <!-- Client Image-->
+            <Image Width="150" Source="{Binding Image}" MaxHeight="200"/>
+            <!-- Search client image button -->
+            <Button Style="{StaticResource DefaultButton}" 
+                    Content="PROCURAR" 
+                    Width="120"
+                    Margin="0,10,0,0"
+                    Command="{Binding SearchPicture}"/>
+        </StackPanel>
+        
         <!-- Tipo, E-mail, Site -->
-        <Grid Grid.Column="0">
+        <Grid Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
@@ -41,7 +53,7 @@
         </Grid>
 
         <!--Situação, CPF, Telefone-->
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
@@ -66,7 +78,7 @@
         </Grid>
 
         <!-- Nome, Data de nascimento, Celular -->
-        <Grid Grid.Column="2">
+        <Grid Grid.Column="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />

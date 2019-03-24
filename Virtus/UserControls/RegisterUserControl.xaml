@@ -6,6 +6,11 @@
              xmlns:local="clr-namespace:Virtus"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1280">
+
+    <UserControl.DataContext>
+        <local:RegisterClientsViewModel/>
+    </UserControl.DataContext>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
