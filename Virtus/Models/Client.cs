@@ -6,7 +6,7 @@ namespace Virtus
     /// <summary>
     /// The client register model
     /// </summary>
-    public class Client
+    public class Client : BaseViewModel
     {
         #region Public Properties
 

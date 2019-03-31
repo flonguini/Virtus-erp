@@ -1,8 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 
@@ -20,7 +18,7 @@ namespace Virtus
         /// <summary>
         /// List of <see cref="Client"/> that populates the datagrid
         /// </summary>
-        public ObservableCollection<Client> Clients { get; set; }
+        public ObservableCollection<Client> ClientsList { get; set; }
 
         public BitmapImage Image { get; set; } = new BitmapImage(new Uri(@"/Virtus;component/Resources/DefaultUser2.png", UriKind.RelativeOrAbsolute));
 
@@ -38,8 +36,6 @@ namespace Virtus
         /// </summary>
         public ICommand SaveClient { get; set; }
 
-        
-
         #endregion
 
         #region Constructors
@@ -49,48 +45,13 @@ namespace Virtus
         /// </summary>
         public RegisterClientsViewModel()
         {
-            // Initialize the client property
             Client = new Client();
+
+            ClientsList = new ObservableCollection<Client>();
 
             SearchPicture = new RelayCommand(SearchProfilePicure);
 
             SaveClient = new RelayCommand(SaveNewClient);
-
-            Clients = new ObservableCollection<Client>
-            {
-                new Client
-                {
-                    Name = "Fernando",
-                    Type = TypeOfPerson.Fisica,
-                    Situation = Situation.Ativo,
-                    PhoneNumber = "3565-5495",
-                    CellPhone = "11 9 6199-2735",
-                    Email = "flonguini@outlook.com",
-                    DateOfRegister = DateTime.Now
-                },
-
-                new Client
-                {
-                    Name = "Rafaela",
-                    Type = TypeOfPerson.Juridica,
-                    Situation = Situation.Ativo,
-                    PhoneNumber = "3565-5495",
-                    CellPhone = "11 9 6199-2735",
-                    Email = "rafaela@outlook.com",
-                    DateOfRegister = DateTime.Now
-                },
-
-                new Client
-                {
-                    Name = "Roberta",
-                    Type = TypeOfPerson.Fisica,
-                    Situation = Situation.Ativo,
-                    PhoneNumber = "3565-5495",
-                    CellPhone = "11 9 6199-2735",
-                    Email = "Roberta@outlook.com",
-                    DateOfRegister = DateTime.Now
-                }
-            };
         }
 
         #endregion
@@ -111,6 +72,8 @@ namespace Virtus
 
         public void SaveNewClient()
         {
+
+            // TODO: Save client to the database
             var c = new Client
             {
                 Email = Client.Email,
@@ -135,7 +98,9 @@ namespace Virtus
                 }
             };
 
-            Clients.Add(c);
+            ClientsList.Add(c);
+
+            Client = new Client();
         }
 
         #endregion

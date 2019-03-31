@@ -65,7 +65,7 @@
             </Grid.RowDefinitions>
 
             <TextBlock Text="Stuação" Style="{StaticResource TextBlockStyle}" />
-            <TextBlock Grid.Row="1" Text="CPF" Style="{StaticResource TextBlockStyle}" />
+            <TextBlock Grid.Row="1" Text="{Binding Client.Type, Converter={local:CpfCnpjValueConverter}}" Style="{StaticResource TextBlockStyle}" />
             <TextBlock Grid.Row="2" Text="Telefone" Style="{StaticResource TextBlockStyle}" />
 
             <ComboBox Grid.Column="1"
@@ -89,7 +89,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Nome" Style="{StaticResource TextBlockStyle}" />
+            <TextBlock Text="{Binding Client.Type, Converter={local:NamesValueConverter}}" Style="{StaticResource TextBlockStyle}" />
             <TextBlock Grid.Row="1" Text="Data de Nascimento" Style="{StaticResource TextBlockStyle}" />
             <TextBlock Grid.Row="2" Text="Celular" Style="{StaticResource TextBlockStyle}" />
 

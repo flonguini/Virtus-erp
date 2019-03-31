@@ -48,7 +48,7 @@
             <local:AddressUserControl Margin="0,0,15,0" />
         </StackPanel>
 
-        <!--Btn salvar-->
+        <!-- Save Button -->
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
             <Button Content="SALVAR"
                     Grid.ColumnSpan="2"
@@ -66,21 +66,36 @@
 
         </StackPanel>
 
-        <!-- grid -->
+        <!-- Clients Datagrid -->
         <DataGrid Grid.ColumnSpan="2" 
                   AutoGenerateColumns="False" 
-                  ItemsSource="{Binding Clients}" 
+                  ItemsSource="{Binding ClientsList}" 
                   Grid.Row="4"
                   ScrollViewer.CanContentScroll="True"
-                  ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,0,20,0">
-            <DataGrid.Columns >
-                <DataGridTextColumn Width="250" Binding="{Binding Name}" Header="Nome"></DataGridTextColumn>
-                <DataGridTextColumn Width="150" Binding="{Binding Type}" Header="Tipo"></DataGridTextColumn>
-                <DataGridTextColumn Width="150" Binding="{Binding Situation}" Header="Situação"></DataGridTextColumn>
-                <DataGridTextColumn Width="120" Binding="{Binding PhoneNumber}" Header="Telefone"></DataGridTextColumn>
-                <DataGridTextColumn Width="120" Binding="{Binding CellPhone}" Header="Celular"></DataGridTextColumn>
-                <DataGridTextColumn Width="250" Binding="{Binding Email}" Header="E-mail"></DataGridTextColumn>
-                <DataGridTextColumn Width="150" Binding="{Binding DateOfRegister}" Header="Data de cadastro"></DataGridTextColumn>
+                  ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,0,20,0"
+                  IsReadOnly="True"
+                  CanUserResizeColumns="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="200" Binding="{Binding Name}" Header="Nome">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource {x:Type TextBlock}}">
+                            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Width="150" Binding="{Binding Type}" Header="Tipo" />
+                <DataGridTextColumn Width="150" Binding="{Binding Situation}" Header="Situação" />
+                <DataGridTextColumn Width="120" Binding="{Binding PhoneNumber}" Header="Telefone" />
+                <DataGridTextColumn Width="120" Binding="{Binding CellPhone}" Header="Celular" />
+                <DataGridTextColumn Width="200" Binding="{Binding Email}" Header="E-mail" />
+                <DataGridTextColumn Width="150" Binding="{Binding DateOfRegister}" Header="Data de cadastro" />
+                <DataGridTextColumn Width="100" Binding="{Binding Address.GetAddress}" Header="Endereço">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource {x:Type TextBlock}}">
+                            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
 

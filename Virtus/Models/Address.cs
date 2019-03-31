@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Virtus
+﻿namespace Virtus
 {
+    /// <summary>
+    /// Represents an address
+    /// </summary>
     public class Address
     {
         #region Public Properties
@@ -44,6 +41,11 @@ namespace Virtus
         /// City from client
         /// </summary>
         public string City { get; set; }
+
+        /// <summary>
+        /// Gets the full address
+        /// </summary>
+        public string GetAddress { get => $"{Street}, {Number} - {Neighborhood}, {City} - {State}"; }
 
         #endregion
     }

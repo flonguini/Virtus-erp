@@ -50,7 +50,8 @@
                       Grid.Column="1" 
                       MinWidth="150" 
                       HorizontalAlignment="Left" 
-                      Style="{StaticResource DefaultComboBox}">
+                      Style="{StaticResource DefaultComboBox}"
+                      SelectedValue="{Binding Client.Address.State}">
                 <ComboBoxItem>teste1</ComboBoxItem>
                 <ComboBoxItem>teste2</ComboBoxItem>
                 <ComboBoxItem>teste3</ComboBoxItem>

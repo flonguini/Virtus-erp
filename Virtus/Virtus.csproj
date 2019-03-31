@@ -99,6 +99,8 @@
     <Compile Include="UserControls\Register\RegisterSupplierUserControl.xaml.cs">
       <DependentUpon>RegisterSupplierUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ValueConverters\CpfCnpjValueConverter.cs" />
+    <Compile Include="ValueConverters\NamesValueConverter.cs" />
     <Compile Include="ValueConverters\RegisterPageValueConverter.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\BaseValueConverter.cs" />
