@@ -46,48 +46,57 @@
                     <DropShadowEffect Opacity="0.3" Direction="0" ShadowDepth="3" />
                 </Border.Effect>
                 <StackPanel>
-                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeAddressCard}">
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeAddressCard}"
+                            Command="{Binding MainButton}" CommandParameter="Register">
                         <Button.Resources>
                             <sys:String x:Key="Tag">Cadastros</sys:String>
                         </Button.Resources>
                     </Button>
 
-                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCube}">
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCube}"
+                            Command="{Binding MainButton}" CommandParameter="Products">
                         <Button.Resources>
                             <sys:String x:Key="Tag">Produtos</sys:String>
                         </Button.Resources>
                     </Button>
-                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeGear}">
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeGear}"
+                            Command="{Binding MainButton}" CommandParameter="Services">
                         <Button.Resources>
                             <sys:String x:Key="Tag">Serviços</sys:String>
                         </Button.Resources>
                     </Button>
-                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeBarcode}">
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeBarcode}"
+                            Command="{Binding MainButton}" CommandParameter="Budget">
                         <Button.Resources>
                             <sys:String x:Key="Tag">Orçamentos</sys:String>
                         </Button.Resources>
                     </Button>
-                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeFolder}">
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeFolder}"
+                            Command="{Binding MainButton}" CommandParameter="WorkOrder">
                         <Button.Resources>
                             <sys:String x:Key="Tag">O. S.</sys:String>
                         </Button.Resources>
                     </Button>
-                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeChartLine}">
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeChartLine}"
+                            Command="{Binding MainButton}" CommandParameter="Sales">
                         <Button.Resources>
                             <sys:String x:Key="Tag">Vendas</sys:String>
                         </Button.Resources>
                     </Button>
-                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCubes}">
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCubes}"
+                            Command="{Binding MainButton}" CommandParameter="Inventory">
                         <Button.Resources>
                             <sys:String x:Key="Tag">Estoque</sys:String>
                         </Button.Resources>
                     </Button>
-                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeDollar}">
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeDollar}"
+                            Command="{Binding MainButton}" CommandParameter="Finance">
                         <Button.Resources>
                             <sys:String x:Key="Tag">Finaceiro</sys:String>
                         </Button.Resources>
                     </Button>
-                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeFile}" Height="65">
+                    <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeFile}" Height="65"
+                            Command="{Binding MainButton}" CommandParameter="Reports">
                         <Button.Resources>
                             <sys:String x:Key="Tag">Relatórios</sys:String>
                         </Button.Resources>

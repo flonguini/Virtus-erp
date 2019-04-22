@@ -16,6 +16,22 @@ namespace Virtus
             {
                 case ApplicationPage.Register:
                     return new RegisterUserControl();
+                case ApplicationPage.Products:
+                    return new ProducsUserControl();
+                case ApplicationPage.Budget:
+                    return new BudgetUserControl();
+                case ApplicationPage.Finance:
+                    return new FinanceUserControl();
+                case ApplicationPage.Inventory:
+                    return new InventoryUserControl();
+                case ApplicationPage.Reports:
+                    return new ReportsUserControl();
+                case ApplicationPage.Sales:
+                    return new SalesUserControl();
+                case ApplicationPage.Services:
+                    return new ServicesUserControl();
+                case ApplicationPage.WorkOrder:
+                    return new WorkOrderUserControl();
                 default:
                     Debugger.Break();
                     return null;

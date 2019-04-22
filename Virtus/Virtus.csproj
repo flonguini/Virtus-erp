@@ -78,6 +78,18 @@
     <Compile Include="MarkupExtensions\EnumBindingSourceExtension.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Client.cs" />
+    <Compile Include="UserControls\BudgetUserControl.xaml.cs">
+      <DependentUpon>BudgetUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FinanceUserControl.xaml.cs">
+      <DependentUpon>FinanceUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InventoryUserControl.xaml.cs">
+      <DependentUpon>InventoryUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProducsUserControl.xaml.cs">
+      <DependentUpon>ProducsUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Register\General\AddressUserControl.xaml.cs">
       <DependentUpon>AddressUserControl.xaml</DependentUpon>
     </Compile>
@@ -98,6 +110,18 @@
     </Compile>
     <Compile Include="UserControls\Register\RegisterSupplierUserControl.xaml.cs">
       <DependentUpon>RegisterSupplierUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ReportsUserControl.xaml.cs">
+      <DependentUpon>ReportsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SalesUserControl.xaml.cs">
+      <DependentUpon>SalesUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ServicesUserControl.xaml.cs">
+      <DependentUpon>ServicesUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WorkOrderUserControl.xaml.cs">
+      <DependentUpon>WorkOrderUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ValueConverters\CpfCnpjValueConverter.cs" />
     <Compile Include="ValueConverters\NamesValueConverter.cs" />
@@ -147,6 +171,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\BudgetUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\FinanceUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\InventoryUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ProducsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\Register\General\AddressUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -172,6 +212,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Register\RegisterSupplierUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ReportsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SalesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ServicesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\WorkOrderUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -222,7 +278,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UserControls\Budgets\" />
+    <Folder Include="UserControls\Finance\" />
+    <Folder Include="UserControls\Inventory\" />
+    <Folder Include="UserControls\Products\" />
+    <Folder Include="UserControls\Reports\" />
+    <Folder Include="UserControls\Sales\" />
+    <Folder Include="UserControls\Services\" />
+    <Folder Include="UserControls\WorkOrder\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DefaultUser2.png" />
   </ItemGroup>
