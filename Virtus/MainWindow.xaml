@@ -6,7 +6,9 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:Virtus"
         mc:Ignorable="d"
-        Title="" Height="780" Width="1400" WindowStartupLocation="CenterScreen">
+        Title="" Height="780" Width="1400" 
+        WindowStartupLocation="CenterScreen" 
+        MinHeight="780" MinWidth="1400">
 
     <Grid>
 

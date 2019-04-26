@@ -17,15 +17,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        
-        <StackPanel Orientation="Horizontal" Background="{StaticResource DarkBlueBrush}">
-            <Button Content="Clientes" Style="{StaticResource MenuButton}" Command="{Binding MenuButton}" CommandParameter="Clientes"/>
-            <Button Content="Fornecedores" Style="{StaticResource MenuButton}" Command="{Binding MenuButton}" CommandParameter="Fornecedores" />
-            <Button Content="Funcionários" Style="{StaticResource MenuButton}" Command="{Binding MenuButton}" CommandParameter="Funcionarios"/>
-            <Button Content="Transportadoras" Style="{StaticResource MenuButton}" Command="{Binding MenuButton}" CommandParameter="Transportadoras"/>
-        </StackPanel>
-        
-        <!-- Register client-->
+        <local:SubMenuUserControl />
 
         <!--#region Content-->
         <ContentControl Grid.Row="1" 
