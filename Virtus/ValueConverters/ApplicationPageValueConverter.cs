@@ -17,7 +17,7 @@ namespace Virtus
                 case ApplicationPage.Register:
                     return new RegisterUserControl();
                 case ApplicationPage.Products:
-                    return new ProducsUserControl();
+                    return new ProductsUserControl();
                 case ApplicationPage.Budget:
                     return new BudgetUserControl();
                 case ApplicationPage.Finance:

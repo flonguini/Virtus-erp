@@ -7,21 +7,17 @@ namespace Virtus
     /// <summary>
     /// Converts the <see cref="RegisterPages"/> to an actual view
     /// </summary>
-    public class RegisterPageValueConverter : BaseValueConverter<RegisterPageValueConverter>
+    public class ProductPageValueConverter : BaseValueConverter<ProductPageValueConverter>
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             // Find the appropriate view
-            switch ((RegisterPages)value)
+            switch ((ProductPages)value)
             {
-                case RegisterPages.Client:
-                    return new RegisterClientsUserControl();
-                case RegisterPages.Supplier:
-                    return new RegisterSupplierUserControl();
-                case RegisterPages.Employee:
-                    return new RegisterEmployeeUserControl();
-                case RegisterPages.Carrier:
-                    return new RegisterCarrierUserControl();
+                case ProductPages.Add:
+                    return new AddProductUserControl();
+                case ProductPages.Labels:
+                    return new LabelsUserControl();
                 default:
                     Debugger.Break();
                     return null;

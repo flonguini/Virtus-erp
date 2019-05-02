@@ -72,6 +72,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataModels\ApplicationPage.cs" />
+    <Compile Include="DataModels\ProductPage.cs" />
     <Compile Include="DataModels\RegisterPage.cs" />
     <Compile Include="DataModels\Situation.cs" />
     <Compile Include="DataModels\TypeOfPerson.cs" />
@@ -88,8 +89,14 @@
     <Compile Include="UserControls\InventoryUserControl.xaml.cs">
       <DependentUpon>InventoryUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ProducsUserControl.xaml.cs">
-      <DependentUpon>ProducsUserControl.xaml</DependentUpon>
+    <Compile Include="UserControls\ProductsUserControl.xaml.cs">
+      <DependentUpon>ProductsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Product\AddProductUserControl.xaml.cs">
+      <DependentUpon>AddProductUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Product\LabelsUserControl.xaml.cs">
+      <DependentUpon>LabelsUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Register\General\AddressUserControl.xaml.cs">
       <DependentUpon>AddressUserControl.xaml</DependentUpon>
@@ -129,12 +136,14 @@
     </Compile>
     <Compile Include="ValueConverters\CpfCnpjValueConverter.cs" />
     <Compile Include="ValueConverters\NamesValueConverter.cs" />
+    <Compile Include="ValueConverters\ProductPageValueConverter.cs" />
     <Compile Include="ValueConverters\RegisterPageValueConverter.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\BaseValueConverter.cs" />
     <Compile Include="ValueConverters\EnumDescriptionTypeConverter.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\Product\ProductViewModel.cs" />
     <Compile Include="ViewModels\Register\RegisterClientsViewModel.cs" />
     <Compile Include="ViewModels\Register\RegisterViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
@@ -187,7 +196,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\ProducsUserControl.xaml">
+    <Page Include="UserControls\ProductsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Product\AddProductUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Product\LabelsUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -290,7 +307,6 @@
     <Folder Include="UserControls\Budgets\" />
     <Folder Include="UserControls\Finance\" />
     <Folder Include="UserControls\Inventory\" />
-    <Folder Include="UserControls\Products\" />
     <Folder Include="UserControls\Reports\" />
     <Folder Include="UserControls\Sales\" />
     <Folder Include="UserControls\Services\" />

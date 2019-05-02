@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 
 namespace Virtus
 {
-    public class RegisterViewModel : BaseViewModel
+    public class ProductViewModel : BaseViewModel
     {
         private ObservableCollection<SubMenuButton> _subMenuButtons;
 
@@ -22,7 +17,7 @@ namespace Virtus
         /// <summary>
         /// The current register page
         /// </summary>
-        public RegisterPages RegisterContent { get; set; } = RegisterPages.Client;
+        public ProductPages ProductContent { get; set; } = ProductPages.Add;
 
 
         /// <summary>
@@ -30,7 +25,7 @@ namespace Virtus
         /// </summary>
         public ICommand MenuButton { get; set; }
 
-        public RegisterViewModel()
+        public ProductViewModel()
         {
             SubMenuButtons = new ObservableCollection<SubMenuButton>();
             MenuButton = new RelayParameterizedCommand(ChangeSubMenuPage);
@@ -39,10 +34,8 @@ namespace Virtus
 
         private void CreateSubMenu()
         {
-            _subMenuButtons.Add(new SubMenuButton("Clientes", MenuButton, "Clientes"));
-            _subMenuButtons.Add(new SubMenuButton("Fornecedores", MenuButton, "Fornecedores"));
-            _subMenuButtons.Add(new SubMenuButton("Funcionarios", MenuButton, "Funcionarios"));
-            _subMenuButtons.Add(new SubMenuButton("Transportadoras", MenuButton, "Transportadoras"));
+            _subMenuButtons.Add(new SubMenuButton("Adicionar Produto", MenuButton, "Add"));
+            _subMenuButtons.Add(new SubMenuButton("Gerar Etiquetas", MenuButton, "Labels"));
         }
 
         /// <summary>
@@ -53,21 +46,13 @@ namespace Virtus
         {
             switch (menuName)
             {
-                case "Clientes":
+                case "Add":
                     // Open the register client page
-                    RegisterContent = RegisterPages.Client;
+                    ProductContent = ProductPages.Add;
                     break;
-                case "Fornecedores":
+                case "Labels":
                     // Open the register supplier page
-                    RegisterContent = RegisterPages.Supplier;
-                    break;
-                case "Funcionarios":
-                    // Open the register employee page
-                    RegisterContent = RegisterPages.Employee;
-                    break;
-                case "Transportadoras":
-                    // Open the register carrier page
-                    RegisterContent = RegisterPages.Carrier;
+                    ProductContent = ProductPages.Labels;
                     break;
                 default:
                     break;

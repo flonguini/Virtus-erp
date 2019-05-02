@@ -3,7 +3,7 @@
     /// <summary>
     /// A page from register option
     /// </summary>
-    public enum RegisterPage
+    public enum RegisterPages
     {
         /// <summary>
         /// Register client page
