@@ -75,20 +75,20 @@
                   ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,0,20,0"
                   IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Name}" Header="Nome">
+                <DataGridTextColumn Width="150" Binding="{Binding Name}" Header="Nome">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource {x:Type TextBlock}}">
                             <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Type}" Header="Tipo" />
-                <DataGridTextColumn Binding="{Binding Situation}" Header="Situação" />
-                <DataGridTextColumn Binding="{Binding PhoneNumber}" Header="Telefone" />
-                <DataGridTextColumn Binding="{Binding CellPhone}" Header="Celular" />
-                <DataGridTextColumn Binding="{Binding Email}" Header="E-mail" />
-                <DataGridTextColumn Binding="{Binding DateOfRegister}" Header="Data de cadastro" />
-                <DataGridTextColumn Binding="{Binding Address.GetAddress}" Header="Endereço">
+                <DataGridTextColumn Width="120" Binding="{Binding Type}" Header="Tipo" />
+                <DataGridTextColumn Width="140" Binding="{Binding Situation}" Header="Situação" />
+                <DataGridTextColumn Width="120" Binding="{Binding PhoneNumber}" Header="Telefone" />
+                <DataGridTextColumn Width="120" Binding="{Binding CellPhone}" Header="Celular" />
+                <DataGridTextColumn Width="180" Binding="{Binding Email}" Header="E-mail" />
+                <DataGridTextColumn Width="150" Binding="{Binding DateOfRegister}" Header="Data de cadastro" />
+                <DataGridTextColumn Width="*" Binding="{Binding Address.GetAddress}" Header="Endereço">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource {x:Type TextBlock}}">
                             <Setter Property="TextTrimming" Value="CharacterEllipsis"/>

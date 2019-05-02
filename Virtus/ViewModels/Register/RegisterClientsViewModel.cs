@@ -20,6 +20,9 @@ namespace Virtus
         /// </summary>
         public ObservableCollection<Client> ClientsList { get; set; }
 
+        /// <summary>
+        /// The client image profile
+        /// </summary>
         public BitmapImage Image { get; set; } = new BitmapImage(new Uri(@"/Virtus;component/Resources/DefaultUser2.png", UriKind.RelativeOrAbsolute));
 
         #endregion

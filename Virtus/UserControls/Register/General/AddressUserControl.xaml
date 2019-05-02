@@ -51,7 +51,7 @@
                       MinWidth="150" 
                       HorizontalAlignment="Left" 
                       Style="{StaticResource DefaultComboBox}"
-                      SelectedValue="{Binding Client.Address.State}">
+                      Text="{Binding Client.Address.State}">
                 <ComboBoxItem>teste1</ComboBoxItem>
                 <ComboBoxItem>teste2</ComboBoxItem>
                 <ComboBoxItem>teste3</ComboBoxItem>
