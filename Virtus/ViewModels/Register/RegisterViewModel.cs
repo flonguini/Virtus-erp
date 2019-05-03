@@ -1,55 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-
-namespace Virtus
+﻿namespace Virtus
 {
     public class RegisterViewModel : BaseViewModel
     {
-        private ObservableCollection<SubMenuButton> _subMenuButtons;
-
-        public ObservableCollection<SubMenuButton> SubMenuButtons
-        {
-            get { return _subMenuButtons; }
-            set { _subMenuButtons = value; }
-        }
-
+        #region Public Properties
 
         /// <summary>
         /// The current register page
         /// </summary>
         public RegisterPages RegisterContent { get; set; } = RegisterPages.Client;
 
+        #endregion
+
+        #region Contructors
 
         /// <summary>
-        /// Command for the menu
+        /// Default Constructor
         /// </summary>
-        public ICommand MenuButton { get; set; }
-
         public RegisterViewModel()
         {
-            SubMenuButtons = new ObservableCollection<SubMenuButton>();
-            MenuButton = new RelayParameterizedCommand(ChangeSubMenuPage);
+            SubMenuCommand = new RelayParameterizedCommand(ChangeSubMenuPage);
             CreateSubMenu();
         }
 
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Create the sub menu buttons
+        /// </summary>
         private void CreateSubMenu()
         {
-            _subMenuButtons.Add(new SubMenuButton("Clientes", MenuButton, "Clientes"));
-            _subMenuButtons.Add(new SubMenuButton("Fornecedores", MenuButton, "Fornecedores"));
-            _subMenuButtons.Add(new SubMenuButton("Funcionarios", MenuButton, "Funcionarios"));
-            _subMenuButtons.Add(new SubMenuButton("Transportadoras", MenuButton, "Transportadoras"));
+            SubMenuButtons.Add(new SubMenuButton("Clientes", SubMenuCommand, "Clientes"));
+            SubMenuButtons.Add(new SubMenuButton("Fornecedores", SubMenuCommand, "Fornecedores"));
+            SubMenuButtons.Add(new SubMenuButton("Funcionarios", SubMenuCommand, "Funcionarios"));
+            SubMenuButtons.Add(new SubMenuButton("Transportadoras", SubMenuCommand, "Transportadoras"));
         }
 
         /// <summary>
         /// Change the current register content
         /// </summary>
         /// <param name="menuName">The content name</param>
-        public void ChangeSubMenuPage(object menuName)
+        protected override void ChangeSubMenuPage(object menuName)
         {
             switch (menuName)
             {
@@ -73,5 +65,7 @@ namespace Virtus
                     break;
             }
         }
+
+        #endregion
     }
 }

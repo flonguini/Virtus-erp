@@ -1,6 +1,8 @@
 ﻿using PropertyChanged;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 
 namespace Virtus
 {
@@ -8,16 +10,52 @@ namespace Virtus
     /// Base viewmodel that implements <see cref="INotifyPropertyChanged"/> interface
     /// </summary>
     [AddINotifyPropertyChangedInterface]
-    public class BaseViewModel : INotifyPropertyChanged
+    public abstract class BaseViewModel : INotifyPropertyChanged
     {
+        #region Public Properties
+
+        /// <summary>
+        /// Command for the menu
+        /// </summary>
+        public ICommand SubMenuCommand { get; set; }
+
+        /// <summary>
+        /// Collection of Sub Menu Buttons
+        /// </summary>
+        public ObservableCollection<SubMenuButton> SubMenuButtons { get; set; }
+
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
+        public BaseViewModel()
+        {
+            SubMenuButtons = new ObservableCollection<SubMenuButton>();
+        }
+
+        #endregion
+
+        #region Events
+
         /// <summary>
         /// Event that fires when a property is changed
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged = (sender, e) => {};
 
-        //protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        //{
-        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        //}
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Change the page to clicked sub menu button
+        /// </summary>
+        /// <param name="subMenuName">Name of the page</param>
+        protected virtual void ChangeSubMenuPage(object subMenuName) { }
+
+        #endregion
+
     }
 }

@@ -5,14 +5,6 @@ namespace Virtus
 {
     public class ProductViewModel : BaseViewModel
     {
-        private ObservableCollection<SubMenuButton> _subMenuButtons;
-
-        public ObservableCollection<SubMenuButton> SubMenuButtons
-        {
-            get { return _subMenuButtons; }
-            set { _subMenuButtons = value; }
-        }
-
 
         /// <summary>
         /// The current register page
@@ -34,8 +26,8 @@ namespace Virtus
 
         private void CreateSubMenu()
         {
-            _subMenuButtons.Add(new SubMenuButton("Adicionar Produto", MenuButton, "Add"));
-            _subMenuButtons.Add(new SubMenuButton("Gerar Etiquetas", MenuButton, "Labels"));
+            SubMenuButtons.Add(new SubMenuButton("Adicionar Produto", MenuButton, "Add"));
+            SubMenuButtons.Add(new SubMenuButton("Gerar Etiquetas", MenuButton, "Labels"));
         }
 
         /// <summary>
