@@ -34,7 +34,7 @@ namespace Virtus
         /// Change the current register content
         /// </summary>
         /// <param name="menuName">The content name</param>
-        public void ChangeSubMenuPage(object menuName)
+        protected override void ChangeSubMenuPage(object menuName)
         {
             switch (menuName)
             {

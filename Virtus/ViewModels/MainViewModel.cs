@@ -20,7 +20,7 @@ namespace Virtus
         /// <summary>
         /// The current page of the application
         /// </summary>
-        public ApplicationPage MainContent { get; set; } = ApplicationPage.Register;
+        public ApplicationPages MainContent { get; set; } = ApplicationPages.Register;
 
         public MainViewModel()
         {
@@ -32,31 +32,31 @@ namespace Virtus
             switch (page as string)
             {
                 case "Register":
-                    MainContent = ApplicationPage.Register;
+                    MainContent = ApplicationPages.Register;
                     break;
                 case "Budget":
-                    MainContent = ApplicationPage.Budget;
+                    MainContent = ApplicationPages.Budget;
                     break;
                 case "Finance":
-                    MainContent = ApplicationPage.Finance;
+                    MainContent = ApplicationPages.Finance;
                     break;
                 case "Inventory":
-                    MainContent = ApplicationPage.Inventory;
+                    MainContent = ApplicationPages.Inventory;
                     break;
                 case "Products":
-                    MainContent = ApplicationPage.Products;
+                    MainContent = ApplicationPages.Products;
                     break;
                 case "Reports":
-                    MainContent = ApplicationPage.Reports;
+                    MainContent = ApplicationPages.Reports;
                     break;
                 case "Sales":
-                    MainContent = ApplicationPage.Sales;
+                    MainContent = ApplicationPages.Sales;
                     break;
                 case "Services":
-                    MainContent = ApplicationPage.Services;
+                    MainContent = ApplicationPages.Services;
                     break;
                 case "WorkOrder":
-                    MainContent = ApplicationPage.WorkOrder;
+                    MainContent = ApplicationPages.WorkOrder;
                     break;
                 default:
                     break;

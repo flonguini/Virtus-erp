@@ -5,32 +5,32 @@ using System.Globalization;
 namespace Virtus
 {
     /// <summary>
-    /// Converts the <see cref="ApplicationPage"/> to an actual view
+    /// Converts the <see cref="ApplicationPages"/> to an actual view
     /// </summary>
     public class ApplicationPageValueConverter : BaseValueConverter<ApplicationPageValueConverter>
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             // Find the appropriate view
-            switch ((ApplicationPage)value)
+            switch ((ApplicationPages)value)
             {
-                case ApplicationPage.Register:
+                case ApplicationPages.Register:
                     return new RegisterUserControl();
-                case ApplicationPage.Products:
+                case ApplicationPages.Products:
                     return new ProductsUserControl();
-                case ApplicationPage.Budget:
+                case ApplicationPages.Budget:
                     return new BudgetUserControl();
-                case ApplicationPage.Finance:
+                case ApplicationPages.Finance:
                     return new FinanceUserControl();
-                case ApplicationPage.Inventory:
+                case ApplicationPages.Inventory:
                     return new InventoryUserControl();
-                case ApplicationPage.Reports:
+                case ApplicationPages.Reports:
                     return new ReportsUserControl();
-                case ApplicationPage.Sales:
+                case ApplicationPages.Sales:
                     return new SalesUserControl();
-                case ApplicationPage.Services:
+                case ApplicationPages.Services:
                     return new ServicesUserControl();
-                case ApplicationPage.WorkOrder:
+                case ApplicationPages.WorkOrder:
                     return new WorkOrderUserControl();
                 default:
                     Debugger.Break();

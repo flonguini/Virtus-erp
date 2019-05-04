@@ -71,16 +71,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataModels\ApplicationPage.cs" />
-    <Compile Include="DataModels\ServicestPage.cs" />
-    <Compile Include="DataModels\ProductPage.cs" />
-    <Compile Include="DataModels\RegisterPage.cs" />
+    <Compile Include="DataModels\ApplicationPages.cs" />
+    <Compile Include="DataModels\BudgetPages.cs" />
+    <Compile Include="DataModels\ProductPages.cs" />
+    <Compile Include="DataModels\RegisterPages.cs" />
+    <Compile Include="DataModels\ServicesPages.cs" />
     <Compile Include="DataModels\Situation.cs" />
     <Compile Include="DataModels\TypeOfPerson.cs" />
     <Compile Include="MarkupExtensions\EnumBindingSourceExtension.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\SubMenuButton.cs" />
+    <Compile Include="UserControls\Budgets\AddProductsBudgetUserControl.xaml.cs">
+      <DependentUpon>AddProductsBudgetUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Budgets\AddServicesBudgetUserControl.xaml.cs">
+      <DependentUpon>AddServicesBudgetUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\BudgetUserControl.xaml.cs">
       <DependentUpon>BudgetUserControl.xaml</DependentUpon>
     </Compile>
@@ -140,6 +147,7 @@
     </Compile>
     <Compile Include="ValueConverters\CpfCnpjValueConverter.cs" />
     <Compile Include="ValueConverters\NamesValueConverter.cs" />
+    <Compile Include="ValueConverters\BudgetPageValueConverter.cs" />
     <Compile Include="ValueConverters\ServicesPageValueConverter.cs" />
     <Compile Include="ValueConverters\ProductPageValueConverter.cs" />
     <Compile Include="ValueConverters\RegisterPageValueConverter.cs" />
@@ -147,6 +155,7 @@
     <Compile Include="ValueConverters\BaseValueConverter.cs" />
     <Compile Include="ValueConverters\EnumDescriptionTypeConverter.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Budget\BudgetViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Product\ProductViewModel.cs" />
     <Compile Include="ViewModels\Register\RegisterClientsViewModel.cs" />
@@ -187,6 +196,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\Fonts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Budgets\AddProductsBudgetUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Budgets\AddServicesBudgetUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -314,7 +331,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UserControls\Budgets\" />
     <Folder Include="UserControls\Finance\" />
     <Folder Include="UserControls\Inventory\" />
     <Folder Include="UserControls\Reports\" />

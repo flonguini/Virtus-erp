@@ -6,8 +6,23 @@
              xmlns:local="clr-namespace:Virtus"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <local:BudgetViewModel />
+    </UserControl.DataContext>
+    
     <Grid>
-        <TextBlock Text="Budget user control" FontSize="42" VerticalAlignment="Center"
-                       HorizontalAlignment="Center" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <local:SubMenuUserControl />
+
+        <!--#region Content-->
+        <ContentControl Grid.Row="1" 
+                        Grid.Column="1" 
+                        Margin="15,15,0,0"
+                        Content="{Binding BudgetContent, Converter={local:BudgetPageValueConverter}}" />
+        <!--#endregion-->
     </Grid>
 </UserControl>

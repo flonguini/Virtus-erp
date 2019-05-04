@@ -3,7 +3,7 @@
     /// <summary>
     /// A page of the application
     /// </summary>
-    public enum ApplicationPage
+    public enum ApplicationPages
     {
         /// <summary>
         /// Register page
