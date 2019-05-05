@@ -39,7 +39,7 @@ namespace Virtus
 
         private void CreateSubMenu()
         {
-            SubMenuButtons.Add(new SubMenuButton("Criar Nova OS", MenuButton, "Add"));
+            SubMenuButtons.Add(new SubMenuButton("Criar Nova O.S.", MenuButton, "Add"));
         }
 
         /// <summary>
