@@ -72,6 +72,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataModels\ApplicationPages.cs" />
+    <Compile Include="DataModels\WorkOrderPages.cs" />
     <Compile Include="DataModels\BudgetPages.cs" />
     <Compile Include="DataModels\ProductPages.cs" />
     <Compile Include="DataModels\RegisterPages.cs" />
@@ -145,6 +146,10 @@
     <Compile Include="UserControls\WorkOrderUserControl.xaml.cs">
       <DependentUpon>WorkOrderUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\WorkOrder\AddWorkOrderUserControl.xaml.cs">
+      <DependentUpon>AddWorkOrderUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ValueConverters\WorkOrderPageValueConverter.cs" />
     <Compile Include="ValueConverters\CpfCnpjValueConverter.cs" />
     <Compile Include="ValueConverters\NamesValueConverter.cs" />
     <Compile Include="ValueConverters\BudgetPageValueConverter.cs" />
@@ -163,6 +168,7 @@
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="ViewModels\RelayParameterizedCommand.cs" />
     <Compile Include="ViewModels\Services\ServicesViewModel.cs" />
+    <Compile Include="ViewModels\WorkOrder\WorkOrderViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -283,6 +289,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\WorkOrder\AddWorkOrderUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -335,7 +345,6 @@
     <Folder Include="UserControls\Inventory\" />
     <Folder Include="UserControls\Reports\" />
     <Folder Include="UserControls\Sales\" />
-    <Folder Include="UserControls\WorkOrder\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DefaultUser2.png" />

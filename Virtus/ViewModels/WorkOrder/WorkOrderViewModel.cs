@@ -1,16 +1,21 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace Virtus
 {
-    public class BudgetViewModel : BaseViewModel
+    public class WorkOrderViewModel : BaseViewModel
     {
         #region Public Properties
 
         /// <summary>
         /// The current budget page
         /// </summary>
-        public BudgetPages BudgetContent { get; set; } = BudgetPages.Products;
+        public WorkOrderPages WorkOrderContent { get; set; } = WorkOrderPages.AddWorkOrder;
 
         /// <summary>
         /// Command for the menu
@@ -21,7 +26,7 @@ namespace Virtus
 
         #region Constructos
 
-        public BudgetViewModel()
+        public WorkOrderViewModel()
         {
             SubMenuButtons = new ObservableCollection<SubMenuButton>();
             MenuButton = new RelayParameterizedCommand(ChangeSubMenuPage);
@@ -34,12 +39,11 @@ namespace Virtus
 
         private void CreateSubMenu()
         {
-            SubMenuButtons.Add(new SubMenuButton("Orçamento de Produtos", MenuButton, "Products"));
-            SubMenuButtons.Add(new SubMenuButton("Orçamento de Serviços", MenuButton, "Services"));
+            SubMenuButtons.Add(new SubMenuButton("Criar Nova OS", MenuButton, "Add"));
         }
 
         /// <summary>
-        /// Change the current budget content
+        /// Change the current work order page
         /// </summary>
         /// <param name="menuName">The content name</param>
         protected override void ChangeSubMenuPage(object menuName)
@@ -47,12 +51,8 @@ namespace Virtus
             switch (menuName)
             {
                 case "Products":
-                    // Open the budget client page
-                    BudgetContent = BudgetPages.Products;
-                    break;
-                case "Services":
-                    // Open the budget supplier page
-                    BudgetContent = BudgetPages.Services;
+                    // Open the work order client page
+                    WorkOrderContent = WorkOrderPages.AddWorkOrder;
                     break;
                 default:
                     break;
