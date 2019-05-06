@@ -73,6 +73,7 @@
     </ApplicationDefinition>
     <Compile Include="DataModels\ApplicationPages.cs" />
     <Compile Include="DataModels\InventoryPages.cs" />
+    <Compile Include="DataModels\FinancePages.cs" />
     <Compile Include="DataModels\SalesPages.cs" />
     <Compile Include="DataModels\WorkOrderPages.cs" />
     <Compile Include="DataModels\BudgetPages.cs" />
@@ -96,6 +97,27 @@
     </Compile>
     <Compile Include="UserControls\FinanceUserControl.xaml.cs">
       <DependentUpon>FinanceUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Finance\FinanceAccountsPayableUserControl.xaml.cs">
+      <DependentUpon>FinanceAccountsPayableUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Finance\FinanceAccountsReceivableUserControl.xaml.cs">
+      <DependentUpon>FinanceAccountsReceivableUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Finance\FinanceBankAccountUserControl.xaml.cs">
+      <DependentUpon>FinanceBankAccountUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Finance\FinanceBoletosUserControl.xaml.cs">
+      <DependentUpon>FinanceBoletosUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Finance\FinanceCashFlowUserControl.xaml.cs">
+      <DependentUpon>FinanceCashFlowUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Finance\FinanceCashierUserControl.xaml.cs">
+      <DependentUpon>FinanceCashierUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Finance\FinancePaymentUserControl.xaml.cs">
+      <DependentUpon>FinancePaymentUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\InventoryUserControl.xaml.cs">
       <DependentUpon>InventoryUserControl.xaml</DependentUpon>
@@ -179,6 +201,7 @@
       <DependentUpon>AddWorkOrderUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ValueConverters\InventoryPageValueConverter.cs" />
+    <Compile Include="ValueConverters\FinancePageValueConverter.cs" />
     <Compile Include="ValueConverters\SalesPageValueConverter.cs" />
     <Compile Include="ValueConverters\WorkOrderPageValueConverter.cs" />
     <Compile Include="ValueConverters\CpfCnpjValueConverter.cs" />
@@ -192,6 +215,7 @@
     <Compile Include="ValueConverters\EnumDescriptionTypeConverter.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\Budget\BudgetViewModel.cs" />
+    <Compile Include="ViewModels\Finance\FinanceViewModel.cs" />
     <Compile Include="ViewModels\Inventory\InventoryViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Product\ProductViewModel.cs" />
@@ -251,6 +275,34 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\FinanceUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Finance\FinanceAccountsPayableUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Finance\FinanceAccountsReceivableUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Finance\FinanceBankAccountUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Finance\FinanceBoletosUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Finance\FinanceCashFlowUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Finance\FinanceCashierUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Finance\FinancePaymentUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -410,7 +462,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UserControls\Finance\" />
     <Folder Include="UserControls\Reports\" />
   </ItemGroup>
   <ItemGroup>
