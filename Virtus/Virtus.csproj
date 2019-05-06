@@ -72,6 +72,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataModels\ApplicationPages.cs" />
+    <Compile Include="DataModels\InventoryPages.cs" />
     <Compile Include="DataModels\SalesPages.cs" />
     <Compile Include="DataModels\WorkOrderPages.cs" />
     <Compile Include="DataModels\BudgetPages.cs" />
@@ -98,6 +99,21 @@
     </Compile>
     <Compile Include="UserControls\InventoryUserControl.xaml.cs">
       <DependentUpon>InventoryUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Inventory\InventoryAdjustsUserControl.xaml.cs">
+      <DependentUpon>InventoryAdjustsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Inventory\InventoryPricesUserControl.xaml.cs">
+      <DependentUpon>InventoryPricesUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Inventory\InventoryPurchasesUserControl.xaml.cs">
+      <DependentUpon>InventoryPurchasesUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Inventory\InventoryStockMovimentsUserControl.xaml.cs">
+      <DependentUpon>InventoryStockMovimentsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Inventory\InventoryTransfersUserControl.xaml.cs">
+      <DependentUpon>InventoryTransfersUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ProductsUserControl.xaml.cs">
       <DependentUpon>ProductsUserControl.xaml</DependentUpon>
@@ -162,6 +178,7 @@
     <Compile Include="UserControls\WorkOrder\AddWorkOrderUserControl.xaml.cs">
       <DependentUpon>AddWorkOrderUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ValueConverters\InventoryPageValueConverter.cs" />
     <Compile Include="ValueConverters\SalesPageValueConverter.cs" />
     <Compile Include="ValueConverters\WorkOrderPageValueConverter.cs" />
     <Compile Include="ValueConverters\CpfCnpjValueConverter.cs" />
@@ -175,6 +192,7 @@
     <Compile Include="ValueConverters\EnumDescriptionTypeConverter.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\Budget\BudgetViewModel.cs" />
+    <Compile Include="ViewModels\Inventory\InventoryViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Product\ProductViewModel.cs" />
     <Compile Include="ViewModels\Register\RegisterClientsViewModel.cs" />
@@ -237,6 +255,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\InventoryUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Inventory\InventoryAdjustsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Inventory\InventoryPricesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Inventory\InventoryPurchasesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Inventory\InventoryStockMovimentsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Inventory\InventoryTransfersUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -373,7 +411,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UserControls\Finance\" />
-    <Folder Include="UserControls\Inventory\" />
     <Folder Include="UserControls\Reports\" />
   </ItemGroup>
   <ItemGroup>
